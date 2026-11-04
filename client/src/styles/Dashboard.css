@@ -1,0 +1,299 @@
+.dashboard-page {
+  min-height: 100vh;
+  background: #f1f5f9;
+}
+
+/* Header */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 5%;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  color: #172554;
+  font-size: 23px;
+}
+
+.dashboard-header p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+  color: #334155;
+}
+
+.role-label {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.logout-button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #dc2626;
+  color: white;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #b91c1c;
+}
+
+/* Main content */
+
+.dashboard-content {
+  max-width: 1400px;
+  margin: auto;
+  padding: 30px 5%;
+}
+
+/* Summary cards */
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  padding: 22px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.summary-card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.summary-card h2 {
+  margin: 12px 0 0;
+  color: #172554;
+  font-size: 30px;
+}
+
+.available-card h2 {
+  color: #16a34a;
+}
+
+.assigned-card h2 {
+  color: #2563eb;
+}
+
+.maintenance-card h2 {
+  color: #d97706;
+}
+
+/* Inventory */
+
+.inventory-section {
+  padding: 25px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.inventory-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.inventory-heading h2 {
+  margin: 0;
+  color: #172554;
+  font-size: 20px;
+}
+
+.inventory-heading p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.asset-count {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* Search and filter */
+
+.filter-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.filter-section input,
+.filter-section select {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 14px;
+  outline: none;
+}
+
+.filter-section input {
+  flex: 1;
+  min-width: 0;
+}
+
+.filter-section select {
+  min-width: 165px;
+  background: white;
+}
+
+.filter-section input:focus,
+.filter-section select:focus {
+  border-color: #2563eb;
+}
+
+/* Asset table */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.asset-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.asset-table th,
+.asset-table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.asset-table th {
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+}
+
+.asset-table td {
+  color: #334155;
+}
+
+.asset-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* Status badges */
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.available {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge.assigned {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-badge.maintenance {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status-badge.retired {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.empty-message {
+  padding: 30px !important;
+  text-align: center;
+  color: #64748b !important;
+}
+
+/* Responsive design */
+
+@media (max-width: 900px) {
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .user-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dashboard-content {
+    padding: 20px 16px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .summary-card {
+    padding: 16px;
+  }
+
+  .summary-card h2 {
+    font-size: 25px;
+  }
+
+  .inventory-section {
+    padding: 16px;
+  }
+
+  .inventory-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .filter-section {
+    flex-direction: column;
+  }
+
+  .filter-section select {
+    width: 100%;
+  }
+}
